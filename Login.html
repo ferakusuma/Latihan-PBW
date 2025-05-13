@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Kucing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>LOGIN</h1>
-    <from action="Login.php" method="post" enctype="multipart/from-data">
+    <h1>🐾 Login Kucing 🐾</h1>
+    <form action="Login.php" method="post" enctype="multipart/form-data">
         <label for="email">Email:</label> <br>
-        <input type="email" name="email"> <br>
+        <input type="email" name="email" required> <br>
+
         <label for="password">Password:</label> <br>
-        <input type="Password" name="Password">  <br> <br>
-        <input type="checkbox" name="remember" value="1">
-        <label for="remember">Ingatkan saya!</label> <br> <br>
-        <input type="submit" value="Login">     
-    </from>
-    <p>Belum punya akun? <a href="register.html">Daftar</a></p>
+        <input type="password" name="Password" required> <br><br>
+
+        <input type="checkbox" name="remember" value="1" id="remember">
+        <label for="remember">Ingatkan saya!</label> <br><br>
+
+        <!-- Tombol Estetik -->
+        <button type="submit" class="btn-cute">🐱 Login Sekarang</button>
+    </form>
+
+    <div class="register-link">
+        Belum punya akun? <a href="register.html">Daftar sekarang</a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,243 @@
+/* Gaya Umum */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom right, #ffe4f2, #fff9f9);
+    color: #4b4b4b;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tombol Estetik */
+.btn-cute {
+    background: linear-gradient(135deg, #ff9aa2, #ffb6b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-cute:hover {
+    background: linear-gradient(135deg, #ffb6b9, #ff9aa2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
+
+/* Link Daftar */
+.register-link {
+    margin-top: 30px;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff0f5; /* Warna latar belakang lembut */
+    border-radius: 10px;
+    box-shadow: none; /* Menghapus bayangan */
+}
+
+/* Gaya Link */
+.register-link a {
+    color: #ff69b4;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-weight: bold;
+    transition: none; /* Menghapus animasi */
+}
+
+/* Gaya Hover pada Link */
+.register-link a:hover {
+    color: #ff69b4; /* Warna tetap sama saat hover */
+    transform: none; /* Menghapus transformasi saat hover */
+}
+
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #ff6ec7;
+    margin-top: 20px;
+    font-size: 32px; /* Ukuran font sama seperti halaman HOME */
+    text-shadow: 2px 2px #ffd3ec;
+}
+
+/* Garis Pemisah */
+hr {
+    border: none;
+    height: 5px;
+    background-color: #ffcce6;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+/* Navigasi */
+nav {
+    text-align: center;
+    background-color: #fff0f5;
+    padding: 12px 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px rgba(255, 182, 193, 0.3);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff69b4;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d63384;
+    text-shadow: 1px 1px #ffcce6;
+}
+
+/* Gambar */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Paragraf dan Judul */
+h3 {
+    margin-left: 30px;
+    color: #e75480;
+}
+
+p {
+    margin: 20px 30px;
+    font-size: 16px;
+    line-height: 1.8;
+    background-color: #fff8fb;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 182, 193, 0.3);
+}
+
+/* List Kucing */
+ol {
+    margin: 0 40px 30px 40px;
+}
+
+ol > b > li {
+    font-size: 18px;
+    color: #d63384;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+/* Tabel */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #fff0f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}
+
+th {
+    background-color: #ffb6c1;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ffc0cb;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe6f0;
+}
+
+/* Formulir */
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #fff0f5;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+label {
+    font-weight: bold;
+    color: #c71585;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="color"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ffc0cb;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #ff69b4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e75480;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
