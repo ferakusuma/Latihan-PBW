@@ -1,3 +1,23 @@
+/* Reset margin bawaan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Judul Section Estetik */
+.section-title {
+    font-size: 22px;
+    color: #d63384;
+    margin: 30px;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+
 /* Gaya Umum */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -5,77 +25,36 @@ body {
     color: #4b4b4b;
     margin: 0;
     padding: 0;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Tombol Estetik */
-.btn-cute {
-    background: linear-gradient(135deg, #ff9aa2, #ffb6b9);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', cursive;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.btn-cute:hover {
-    background: linear-gradient(135deg, #ffb6b9, #ff9aa2);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
-}
-
-/* Link Daftar */
-.register-link {
-    margin-top: 30px;
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 16px;
-    color: #444;
+h2 {
     text-align: center;
-    padding: 10px 0;
-    background-color: #fff0f5; /* Warna latar belakang lembut */
-    border-radius: 10px;
-    box-shadow: none; /* Menghapus bayangan */
-}
-
-/* Gaya Link */
-.register-link a {
-    color: #ff69b4;
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #e75480;
+    font-size: 24px;
+    margin: 30px 0 20px;
     font-weight: bold;
-    transition: none; /* Menghapus animasi */
+    text-shadow: 1px 1px #ffd3ec;
 }
-
-/* Gaya Hover pada Link */
-.register-link a:hover {
-    color: #ff69b4; /* Warna tetap sama saat hover */
-    transform: none; /* Menghapus transformasi saat hover */
-}
-
 
 /* Header */
 h1 {
     text-align: center;
     color: #ff6ec7;
     margin-top: 20px;
-    font-size: 32px; /* Ukuran font sama seperti halaman HOME */
+    margin-bottom: 10px;
+    font-size: 32px;
     text-shadow: 2px 2px #ffd3ec;
 }
 
-/* Garis Pemisah */
+/* Garis Bawah Header */
 hr {
     border: none;
     height: 5px;
     background-color: #ffcce6;
-    margin: 10px 0;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 20px auto;
     border-radius: 5px;
 }
 
@@ -100,6 +79,65 @@ nav a {
 nav a:hover {
     color: #d63384;
     text-shadow: 1px 1px #ffcce6;
+}
+
+/* Tombol Estetik */
+.btn-cute {
+    background: linear-gradient(135deg, #ff9aa2, #ffb6b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+    /* Kunci tengah */
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.btn-cute:hover {
+    background: linear-gradient(135deg, #ffb6b9, #ff9aa2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
+
+/* Link Daftar */
+.register-link {
+    margin-top: 30px;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff0f5;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.register-link a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: none;
+}
+
+.register-link a:hover {
+    color: #ff69b4;
+    transform: none;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    /* Biar tetap kiri */
 }
 
 /* Gambar */
@@ -136,7 +174,7 @@ ol {
     margin: 0 40px 30px 40px;
 }
 
-ol > b > li {
+ol>b>li {
     font-size: 18px;
     color: #d63384;
 }
@@ -240,4 +278,112 @@ input[type="submit"]:hover {
     table {
         font-size: 14px;
     }
+}
+
+/* ================== Profil Pengguna ================== */
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+.profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #fff8fb;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(255, 182, 193, 0.3);
+}
+
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb6c1;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.favorite-section {
+    margin: 30px;
+    padding: 20px;
+    background-color: #fff8fb;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2);
+}
+
+.cat-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.center-title {
+  text-align: center;
+}
+
+.cat-gallery img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.cat-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.username {
+  font-family: 'Courier New', monospace;
+  font-size: 28px;
+  color: #ff69b4;
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+  margin-bottom: 20px;
 }

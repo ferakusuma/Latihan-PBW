@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Kucing</title>
+    <title>LOGIN | KUCING</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>🐾 Login Kucing 🐾</h1>
-    <form action="Login.php" method="post" enctype="multipart/form-data">
-        <label for="email">Email:</label> <br>
-        <input type="email" name="email" required> <br>
+    <form action="Login.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
 
-        <label for="password">Password:</label> <br>
-        <input type="password" name="Password" required> <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="Password" required>
 
-        <input type="checkbox" name="remember" value="1" id="remember">
-        <label for="remember">Ingatkan saya!</label> <br><br>
+        <div class="remember-container">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Ingatkan saya!</label>
+        </div>
 
-        <!-- Tombol Estetik -->
+
         <button type="submit" class="btn-cute">🐱 Login Sekarang</button>
     </form>
 
@@ -26,4 +30,5 @@
         Belum punya akun? <a href="register.html">Daftar sekarang</a>
     </div>
 </body>
+
 </html>
