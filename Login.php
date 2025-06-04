@@ -25,7 +25,7 @@
   </form>
 
   <div class="register-link">
-    Belum punya akun? <a href="register.html">Daftar sekarang</a>
+    Belum punya akun? <a href="register.php">Daftar sekarang</a>
   </div>
 </body>
 </html>
