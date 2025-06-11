@@ -1,44 +1,38 @@
 <?php
-    
-    $koneksi = mysqli_connect("localhost:3307","root", "","webkucing");
-    
+    require 'function.php';
 
-    if(!$koneksi) {
-        die("Koneksi gagal!: ".mysqli_connect_error());
-    }
     $query = "SELECT * FROM kucing";
 
-    $result = mysqli_query($koneksi, $query);  //objek
-
-    //ambil data (fetch) dari lemari resualt
-
-
-    $kcg = mysqli_fetch_row($result);
-    // mysqli_fetch_assoc()
-    // mysqli_fetch_array()
-    // mysqli_fetch_object()
-
-    var_dump($kcg);
+    $rows = query($query);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Kucing</title>
 </head>
 <body>
     <h1>Data Kucing</h1>
-
     <table border="1" cellspacing="0" cellpadding="10">
-         <tr>
+        <tr>
             <th>No</th>
+            <th>Foto</th>
             <th>Nama</th>
             <th>Jenis</th>
             <th>Gender</th>
         </tr>
+        <?php 
+        $i = 1;
+        foreach ($rows as $kcg) { ?>
+        <tr>
+            <td><?= $i ?></td>
+            <td><img src="/Latihan-PBW/img/<?= urlencode($kcg['foto']) ?>" width="80"></td>
+            <td><?= $kcg["Nama"] ?></td>
+            <td><?= $kcg["jenis"] ?></td>
+            <td><?= $kcg["gender"] ?></td>
+        </tr>
+        <?php $i++; } ?>
     </table>
 </body>
 </html>
