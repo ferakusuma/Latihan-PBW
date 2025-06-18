@@ -14,4 +14,24 @@ function query($query) {
     }
     return $rows;
 }
+
+    function tambahDataKucing($data) {
+        global $koneksi;
+        $nama = $data["Nama"];
+        $jenis = $data["jenis"];
+        $gender = $data["Gender"];
+
+        $query = "INSERT INTO kucing VALUES ('', '', '$nama', '$jenis', '$gender')";
+        mysqli_query($koneksi, $query);
+
+        return mysqli_affected_rows($koneksi);
+    }
+
+    function hapusdata($id) {
+        global $koneksi;
+        $query = "DELETE FROM kucing WHERE id = $id";
+        mysqli_query($koneksi, $query);
+
+        return mysqli_affected_rows($koneksi);
+    }
 ?>

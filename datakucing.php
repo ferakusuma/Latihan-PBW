@@ -14,6 +14,7 @@
 </head>
 <body>
     <h1>Data Kucing</h1>
+    <a href = "tambahdata.php"><button style="margin-bottom: 12px; background-color: Concrete;"> Tambah Data Kucing</button></a>
     <table border="1" cellspacing="0" cellpadding="10">
         <tr>
             <th>No</th>
@@ -21,6 +22,7 @@
             <th>Nama</th>
             <th>Jenis</th>
             <th>Gender</th>
+            <th>Aksi</th>
         </tr>
         <?php 
         $i = 1;
@@ -31,6 +33,7 @@
             <td><?= $kcg["Nama"] ?></td>
             <td><?= $kcg["jenis"] ?></td>
             <td><?= $kcg["gender"] ?></td>
+            <td><a href="hapusdata.php/?id= <?= $kcg["id"] ?>"><button style="margin-bottom: 12px; background-color: Concrete;"> Hapus Data</button></a></td>
         </tr>
         <?php $i++; } ?>
     </table>
