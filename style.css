@@ -387,3 +387,43 @@ input[type="submit"]:hover {
   box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
   margin-bottom: 20px;
 }
+
+/* Tombol Edit dan Hapus Data Kucing - Estetik dan Serasi */
+.btn-edit,
+.btn-hapus {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin: 4px 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+  text-decoration: none;
+}
+
+/* Tombol Edit - Biru Pastel */
+.btn-edit {
+  background: linear-gradient(135deg, #a3d8f4, #87c8f2);
+}
+
+.btn-edit:hover {
+  background: linear-gradient(135deg, #87c8f2, #a3d8f4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(135, 200, 242, 0.3);
+}
+
+/* Tombol Hapus - Pink Cerah */
+.btn-hapus {
+  background: linear-gradient(135deg, #ff9aa2, #ff758c);
+}
+
+.btn-hapus:hover {
+  background: linear-gradient(135deg, #ff758c, #ff9aa2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 117, 140, 0.3);
+}

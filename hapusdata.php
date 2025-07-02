@@ -1,19 +1,22 @@
 <?php
-    require 'function.php';
-    $id = $_GET['id'];
+require 'function.php';
 
-    if(hapusdata($id) > 0) {
-        echo "<script>
-                alert('Data berhasil dihapus!');
-                document.location.href = '../datakucing.php';
-              </script>";
-    } else {
-        echo "<script>
-                alert('Data gagal dihapus!');
-                document.location.href = '../localhost/datakucing.php';
-              </script>";
-    }
+if (!isset($_GET['id'])) {
+    echo "<script>alert('ID tidak ditemukan!');document.location.href='datakucing.php';</script>";
+    exit;
+}
 
+$id = $_GET['id'];
 
-
+if (hapusdata($id) > 0) {
+    echo "<script>
+        alert('Data berhasil dihapus!');
+        document.location.href = 'datakucing.php';
+      </script>";
+} else {
+    echo "<script>
+        alert('Data gagal dihapus!');
+        document.location.href = 'datakucing.php';
+      </script>";
+}
 ?>

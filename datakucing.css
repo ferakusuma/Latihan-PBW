@@ -1,0 +1,235 @@
+/* Reset dan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom right, #ffe4f2, #fff9f9);
+    color: #4b4b4b;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Judul Halaman */
+h1 {
+    text-align: center;
+    color: #ff6ec7;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-shadow: 2px 2px #ffd3ec;
+}
+
+/* Tombol Tambah Data */
+.btn-cute {
+    background: linear-gradient(135deg, #ff9aa2, #ffb6b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-cute:hover {
+    background: linear-gradient(135deg, #ffb6b9, #ff9aa2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
+
+/* Tabel Data */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 95%;
+    background-color: #fff0f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}
+
+th {
+    background-color: #ffb6c1;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ffc0cb;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe6f0;
+}
+
+/* Gambar Kucing */
+td img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+/* Tombol Edit dan Hapus Serasi dan Imut */
+.btn-edit,
+.btn-hapus {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+}
+
+/* Warna Edit - Lavender Pastel */
+.btn-edit {
+  background: linear-gradient(135deg, #b9fbc0, #a0e7e5);
+}
+
+.btn-edit:hover {
+  background: linear-gradient(135deg, #a0e7e5, #b9fbc0);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(160, 231, 229, 0.4);
+}
+
+/* Warna Hapus - Peach Pink */
+.btn-hapus {
+  background: linear-gradient(135deg, #ff9aa2, #ff758c);
+}
+
+.btn-hapus:hover {
+  background: linear-gradient(135deg, #ff758c, #ff9aa2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 117, 140, 0.4);
+}
+
+
+/* Responsif */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    .btn-edit,
+    .btn-hapus {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    td img {
+        width: 60px;
+    }
+}
+
+/* Form Tambah Data */
+.form-cute {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #fff0f5;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.form-cute label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #c71585;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.form-cute input[type="text"],
+.form-cute input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ffc0cb;
+    border-radius: 8px;
+    font-family: 'Comic Sans MS', cursive;
+    box-sizing: border-box;
+    background-color: #fff8fb;
+}
+
+.form-cute input[type="file"] {
+    background-color: #fff0f8;
+}
+
+.form-cute button[type="submit"] {
+    margin-top: 25px;
+}
+
+/* Form Tambah & Ubah Data */
+.form-cute {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #fff0f5;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.form-cute label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #c71585;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.form-cute input[type="text"],
+.form-cute input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ffc0cb;
+    border-radius: 8px;
+    font-family: 'Comic Sans MS', cursive;
+    box-sizing: border-box;
+    background-color: #fff8fb;
+}
+
+.form-cute input[type="file"] {
+    background-color: #fff0f8;
+}
+
+.form-cute button[type="submit"] {
+    margin-top: 25px;
+}
+
+/* Tambahan styling untuk gambar preview */
+.form-cute img {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}

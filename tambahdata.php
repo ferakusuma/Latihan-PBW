@@ -21,24 +21,26 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <title>Tambah Data Kucing</title>
+    <link rel="stylesheet" href="datakucing.css">
 </head>
 <body>
-    <h1>Tambah Data Kucing</h1>
+    <h1 class="center-title">Tambah Data Kucing</h1>
 
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="Nama">Nama:</label>
-        <input type="text" name="Nama" id="Nama" required /><br>
+<form action="" method="post" enctype="multipart/form-data" class="form-cute">
+    <label for="Nama">Nama:</label>
+    <input type="text" name="Nama" id="Nama" required />
 
-        <label for="jenis">Jenis:</label>
-        <input type="text" name="jenis" id="jenis" required /><br>
+    <label for="jenis">Jenis:</label>
+    <input type="text" name="jenis" id="jenis" required />
 
-        <label for="Gender">Gender:</label>
-        <input type="text" name="Gender" id="gender" /><br>
+    <label for="Gender">Gender:</label>
+    <input type="text" name="Gender" id="gender" />
 
-        <label for="foto">Foto:</label>
-        <input type="file" name="foto" id="foto"><br><br>
+    <label for="foto">Foto:</label>
+    <input type="file" name="foto" id="foto" />
 
-        <button type="submit" name="submit">Tambah Data</button>
-    </form>
+    <button type="submit" name="submit" class="btn-cute">Tambah Data</button>
+</form>
+
 </body>
 </html>
