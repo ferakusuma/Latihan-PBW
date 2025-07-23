@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost:3307", "root", "", "webkucing");
+$koneksi = mysqli_connect("localhost", "root", "", "webkucing");
 
 if (!$koneksi) {
     die("Koneksi gagal!: " . mysqli_connect_error());
@@ -117,6 +117,45 @@ function hapusdata($id) {
     $query = "DELETE FROM kucing WHERE id = $id";
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
+}
+
+function register($data) {
+    global $koneksi;
+
+    $username = stripslashes($data["username"]);
+    $password1 = stripslashes($data["password1"]);
+    $password2 = stripslashes($data["password2"]);
+
+    // Cek apakah username sudah terdaftar
+    $query = "SELECT * FROM user WHERE username = '$username'";
+    $username_check = mysqli_query($koneksi, $query);
+    if (mysqli_num_rows($username_check) > 0) {
+
+
+        return "Username sudah terdaftar!";
+    }
+
+    // Validasi username
+    if(!preg_match("/^[a-zA-Z0-9_]+$/", $username)) {
+        return "Username hanya boleh mengandung huruf, angka, dan underscore!";
+    }
+
+    // Validasi password
+    if ($password1 !== $password2) {
+        return "Konfirmasi password tidak sesuai!";
+    }
+
+    // Enkripsi password
+    $encrypted_password = password_hash($password1, PASSWORD_DEFAULT);
+
+    // Simpan ke database
+    $query = "INSERT INTO user (username, password) VALUES ('$username', '$encrypted_password')";
+
+    if(mysqli_query($koneksi, $query)) {
+        return "Register Berhasil!";
+    } else {
+        return "Register Gagal: " . mysqli_error($koneksi);
+    }
 }
 
 
