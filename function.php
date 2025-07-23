@@ -126,13 +126,9 @@ function register($data) {
     $password1 = stripslashes($data["password1"]);
     $password2 = stripslashes($data["password2"]);
 
-    // Cek apakah username sudah terdaftar
-    $query = "SELECT * FROM user WHERE username = '$username'";
-    $username_check = mysqli_query($koneksi, $query);
-    if (mysqli_num_rows($username_check) > 0) {
-
-
-        return "Username sudah terdaftar!";
+    // Validasi input kosong
+    if (empty($username) || empty($password1) || empty($password2)) {
+        return "Semua field harus diisi!";
     }
 
     // Validasi username
@@ -145,18 +141,41 @@ function register($data) {
         return "Konfirmasi password tidak sesuai!";
     }
 
+    // Cek apakah username sudah terdaftar - GUNAKAN PREPARED STATEMENT
+    $stmt = mysqli_prepare($koneksi, "SELECT username FROM user WHERE username = ?");
+    if (!$stmt) {
+        return "Error dalam query: " . mysqli_error($koneksi);
+    }
+    
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    
+    if (mysqli_num_rows($result) > 0) {
+        mysqli_stmt_close($stmt);
+        return "Username sudah terdaftar!";
+    }
+    mysqli_stmt_close($stmt);
+
     // Enkripsi password
     $encrypted_password = password_hash($password1, PASSWORD_DEFAULT);
 
-    // Simpan ke database
-    $query = "INSERT INTO user (username, password) VALUES ('$username', '$encrypted_password')";
-
-    if(mysqli_query($koneksi, $query)) {
+    // Simpan ke database - GUNAKAN PREPARED STATEMENT
+    $stmt = mysqli_prepare($koneksi, "INSERT INTO user (username, password) VALUES (?, ?)");
+    if (!$stmt) {
+        return "Error dalam query: " . mysqli_error($koneksi);
+    }
+    
+    mysqli_stmt_bind_param($stmt, "ss", $username, $encrypted_password);
+    
+    if (mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_close($stmt);
         return "Register Berhasil!";
     } else {
-        return "Register Gagal: " . mysqli_error($koneksi);
+        $error = mysqli_stmt_error($stmt);
+        mysqli_stmt_close($stmt);
+        return "Register Gagal: " . $error;
     }
 }
-
 
 ?>
